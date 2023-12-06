@@ -14,6 +14,10 @@ namespace WinFormPoC
 {
     public partial class ExcelFileData : Form
     {
+        private int RGB(int red, int green, int blue)
+        {
+            return red + (green << 8) + (blue << 16);
+        }
         public ExcelFileData(Microsoft.Office.Interop.Excel.Range xLRange)
         {
             InitializeComponent();

@@ -1,6 +1,6 @@
 ﻿namespace WinFormPoC
 {
-    partial class DisplaySQLQueryForm
+    partial class ClientPoCExcelTestForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,29 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.QueryText = new System.Windows.Forms.TextBox();
+            this.UpdateQueryText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // QueryText
+            // UpdateQueryText
             // 
-            this.QueryText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QueryText.Location = new System.Drawing.Point(0, 0);
-            this.QueryText.Multiline = true;
-            this.QueryText.Name = "QueryText";
-            this.QueryText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.QueryText.Size = new System.Drawing.Size(1382, 653);
-            this.QueryText.TabIndex = 0;
-            this.QueryText.UseSystemPasswordChar = true;
+            this.UpdateQueryText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UpdateQueryText.Location = new System.Drawing.Point(0, 0);
+            this.UpdateQueryText.Multiline = true;
+            this.UpdateQueryText.Name = "UpdateQueryText";
+            this.UpdateQueryText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.UpdateQueryText.Size = new System.Drawing.Size(800, 450);
+            this.UpdateQueryText.TabIndex = 0;
             // 
-            // DisplaySQLQueryForm
+            // ClientPoCExcelTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1382, 653);
-            this.Controls.Add(this.QueryText);
-            this.Name = "DisplaySQLQueryForm";
-            this.Text = "SQL Query";
-            this.Load += new System.EventHandler(this.DisplaySQLQueryForm_Load);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.UpdateQueryText);
+            this.Name = "ClientPoCExcelTestForm";
+            this.Text = "ClientPoCExcelTestForm";
+            this.Load += new System.EventHandler(this.ClientPoCExcelTestForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -58,6 +57,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox QueryText;
+        private System.Windows.Forms.TextBox UpdateQueryText;
+        private System.ComponentModel.BackgroundWorker backgroundWorker;
     }
 }

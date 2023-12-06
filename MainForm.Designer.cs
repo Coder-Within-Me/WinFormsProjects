@@ -40,6 +40,8 @@
             this.ExcelFormBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ExcelNoteText = new System.Windows.Forms.TextBox();
+            this.ExcelPoCBtn = new System.Windows.Forms.Button();
+            this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -164,7 +166,7 @@
             // ExcelNoteText
             // 
             this.ExcelNoteText.ForeColor = System.Drawing.Color.Red;
-            this.ExcelNoteText.Location = new System.Drawing.Point(361, 267);
+            this.ExcelNoteText.Location = new System.Drawing.Point(16, 208);
             this.ExcelNoteText.Multiline = true;
             this.ExcelNoteText.Name = "ExcelNoteText";
             this.ExcelNoteText.Size = new System.Drawing.Size(427, 83);
@@ -173,12 +175,35 @@
     "dex = 0,ColumnIndex = 0). First row is considered as column names of SQL table.";
             this.ExcelNoteText.Visible = false;
             // 
+            // ExcelPoCBtn
+            // 
+            this.ExcelPoCBtn.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.ExcelPoCBtn.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ExcelPoCBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExcelPoCBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.ExcelPoCBtn.Location = new System.Drawing.Point(455, 267);
+            this.ExcelPoCBtn.Name = "ExcelPoCBtn";
+            this.ExcelPoCBtn.Size = new System.Drawing.Size(297, 100);
+            this.ExcelPoCBtn.TabIndex = 11;
+            this.ExcelPoCBtn.Text = "Client PoC Excel Test";
+            this.ExcelPoCBtn.UseVisualStyleBackColor = false;
+            this.ExcelPoCBtn.Click += new System.EventHandler(this.ExcelPoCBtn_Click);
+            // 
+            // backgroundWorker
+            // 
+            this.backgroundWorker.WorkerReportsProgress = true;
+            this.backgroundWorker.WorkerSupportsCancellation = true;
+            this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker_DoWork);
+            this.backgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BackgroundWorker_ProgressChanged);
+            this.backgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorker_RunWorkerCompleted);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ExcelPoCBtn);
             this.Controls.Add(this.ExcelNoteText);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label3);
@@ -213,5 +238,7 @@
         private System.Windows.Forms.Button ExcelFormBtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox ExcelNoteText;
+        private System.Windows.Forms.Button ExcelPoCBtn;
+        private System.ComponentModel.BackgroundWorker backgroundWorker;
     }
 }
