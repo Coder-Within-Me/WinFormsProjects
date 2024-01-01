@@ -42,6 +42,7 @@
             this.ExcelNoteText = new System.Windows.Forms.TextBox();
             this.ExcelPoCBtn = new System.Windows.Forms.Button();
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
+            this.btnEpPlus = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -183,9 +184,9 @@
             this.ExcelPoCBtn.ForeColor = System.Drawing.Color.Transparent;
             this.ExcelPoCBtn.Location = new System.Drawing.Point(455, 267);
             this.ExcelPoCBtn.Name = "ExcelPoCBtn";
-            this.ExcelPoCBtn.Size = new System.Drawing.Size(297, 100);
+            this.ExcelPoCBtn.Size = new System.Drawing.Size(150, 100);
             this.ExcelPoCBtn.TabIndex = 11;
-            this.ExcelPoCBtn.Text = "Client PoC Excel Test";
+            this.ExcelPoCBtn.Text = "Client Excel Test (Interop)";
             this.ExcelPoCBtn.UseVisualStyleBackColor = false;
             this.ExcelPoCBtn.Click += new System.EventHandler(this.ExcelPoCBtn_Click);
             // 
@@ -197,12 +198,27 @@
             this.backgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BackgroundWorker_ProgressChanged);
             this.backgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorker_RunWorkerCompleted);
             // 
+            // btnEpPlus
+            // 
+            this.btnEpPlus.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnEpPlus.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnEpPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEpPlus.ForeColor = System.Drawing.Color.Transparent;
+            this.btnEpPlus.Location = new System.Drawing.Point(605, 267);
+            this.btnEpPlus.Name = "btnEpPlus";
+            this.btnEpPlus.Size = new System.Drawing.Size(150, 100);
+            this.btnEpPlus.TabIndex = 12;
+            this.btnEpPlus.Text = "Client Excel Test (EPPLUS)";
+            this.btnEpPlus.UseVisualStyleBackColor = false;
+            this.btnEpPlus.Click += new System.EventHandler(this.btnEpPlus_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEpPlus);
             this.Controls.Add(this.ExcelPoCBtn);
             this.Controls.Add(this.ExcelNoteText);
             this.Controls.Add(this.panel2);
@@ -240,5 +256,6 @@
         private System.Windows.Forms.TextBox ExcelNoteText;
         private System.Windows.Forms.Button ExcelPoCBtn;
         private System.ComponentModel.BackgroundWorker backgroundWorker;
+        private System.Windows.Forms.Button btnEpPlus;
     }
 }

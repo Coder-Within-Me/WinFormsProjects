@@ -117,16 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BtnNameEpPlus" xml:space="preserve">
-    <value>Client Excel Test (EPPLUS)</value>
-  </data>
-  <data name="BtnUploadExcel" xml:space="preserve">
-    <value>Upload Excel</value>
-  </data>
-  <data name="buttonName" xml:space="preserve">
-    <value>Client Excel Test (Interop)</value>
-  </data>
-  <data name="EpPlusFormTitle" xml:space="preserve">
-    <value>Excel Processing With EPPLUS</value>
-  </data>
 </root>

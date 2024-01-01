@@ -25,6 +25,8 @@ namespace WinFormPoC
         public MainForm()
         {
             InitializeComponent();
+            ExcelPoCBtn.Text = Properties.Resources.buttonName;
+            btnEpPlus.Text = Properties.Resources.BtnNameEpPlus;
         }
 
         private void NoteListAppBtn_Click(object sender, EventArgs e)
@@ -165,9 +167,6 @@ namespace WinFormPoC
 
             int rowCount = xLRange.Rows.Count;
             int colCount = xLRange.Columns.Count;
-
-            //ClientExceldataGridView.ColumnCount = colCount;
-            //ClientExceldataGridView.RowCount = rowCount;
 
             //ClientExceldataGridView.ColumnCount = colCount;
             //ClientExceldataGridView.RowCount = rowCount;
@@ -366,6 +365,12 @@ namespace WinFormPoC
         private void LoadingForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             //e.Cancel = true;
+        }
+
+        private void btnEpPlus_Click(object sender, EventArgs e)
+        {
+            ClientExcelWithEpPlusForm clientExcelWithEpPlusForm = new ClientExcelWithEpPlusForm();
+            clientExcelWithEpPlusForm.ShowDialog();
         }
     }
     public class columnNames
